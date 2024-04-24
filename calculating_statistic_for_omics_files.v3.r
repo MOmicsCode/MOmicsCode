@@ -7,7 +7,7 @@ adir<-'D:\\wrk\\Praca_13.10.2023-full\\Praca\\XScans\\VirScan\\03.23-analysis\\a
 # preparation of data tables for calculating probability of accidental results in comparison to a control
 calc.p.sample<-function(i, wdir){
   #reading a file representing one sample
-  dt<-read.csv(paste0(wdir, i), stringsAsFactors = FALSE, header = TRUE)
+  dt<-read.csv(paste0(adir, i), stringsAsFactors = FALSE, header = TRUE)
   sum<-sum(dt$count) #for later calculation of signal
   #various dta for later calculations of probability
   dt$signal<-as.double(dt$count/sum)
